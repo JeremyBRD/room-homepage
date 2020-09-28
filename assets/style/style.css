@@ -15,8 +15,11 @@
   font-size: 12px;
 }
 
+/* NAVBAR */
+
 .navbar {
   position: absolute;
+  z-index: 1;
 }
 
 .navbar nav {
@@ -59,4 +62,26 @@
   transition: width 0.3s ease-out;
   right: 75%;
   left: 25%;
+}
+
+/* CAROUSEL */
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-element {
+  display: flex;
+  flex-direction: row;
+  min-width: 100vw;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
