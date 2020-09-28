@@ -66,11 +66,16 @@
 
 /* CAROUSEL */
 
+.carousel-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .carousel {
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  position: relative;
 }
 
 .carousel-element {
@@ -84,4 +89,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 25px;
+}
+
+/* BTN CAROUSEL */
+
+.nav-carousel-btn {
+  position: absolute;
+  top: 474px;
+  left: 840px;
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel-btn {
+  color: var(--dark-gray);
+  background-color: var(--black);
+  padding: 15px 25px;
+  font-size: 30px;
+}
+
+.carousel-btn:hover {
+  background-color: var(--very-dark-gray);
 }
