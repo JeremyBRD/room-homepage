@@ -12,24 +12,51 @@
   font-family: 'Spartan', sans-serif;
   color: var(--black);
   text-decoration: none;
+  font-size: 12px;
+}
+
+.navbar {
+  position: absolute;
 }
 
 .navbar nav {
   display: flex;
   align-items: center;
   position: fixed;
-  margin: 45px 0 0 45px;
+  margin: 55px 0 0 55px;
 }
 
 .navbar a, h1 {
-  margin: 0 30px;
   color: var(--white);
 }
 
 .navbar h1 {
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 25px;
+  margin-right: 50px;
 }
 
 .navbar a {
-  font-weight: 600;
+  margin-right: 30px;
+  position: relative;
+}
+
+.navbar a:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background: var(--white);
+  transition: width 0.3s ease-out;
+  bottom: -13px;
+  left: 25%;
+  right: 75%;
+  border-radius: 25%;
+}
+
+.navbar a:hover:after {
+  width: 50%;
+  transition: width 0.3s ease-out;
+  right: 75%;
+  left: 25%;
 }
