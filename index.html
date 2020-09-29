@@ -106,30 +106,6 @@
       Coded with <i class="fa fa-heart" style="color: red"></i> by <a href="https://www.jeremybrd.com" target="_blank" style="color: blue; text-decoration: under;">Jérémy BRD</a>.
     </div>
   </div>
-  <script>
-    const carouselElements = document.querySelector('.carousel-element');
-    const carouselBtns = document.querySelectorAll('.carousel-btn');
-    const numberOfElements = document.querySelectorAll('.carousel-element').length;
-    let elementIndex = 1;
-    let translateX = 0;
-
-    carouselBtns.forEach(btn => {
-      btn.addEventListener('click', event => {
-        if (event.target.id === 'previous') {
-          if (elementIndex !== 1) {
-            elementIndex-- ;
-            translateX += 100;
-          }
-        } else {
-          if (elementIndex !== numberOfElements) {
-            elementIndex++ ;
-            translateX -= 100;
-          }
-        }
-
-        carouselElements.style.marginLeft = `${translateX}vw`;
-      });
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
