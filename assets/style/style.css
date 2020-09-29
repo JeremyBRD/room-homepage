@@ -15,6 +15,10 @@
   font-size: 12px;
 }
 
+/* .main-container{
+  max-height: 100vh;
+} */
+
 /* NAVBAR */
 
 .navbar {
@@ -84,12 +88,18 @@
   min-width: 100vw;
 }
 
+.carousel-element img {
+  width: 58.3vw;
+  object-fit: cover;
+}
+
 .description {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 0 100px;
+  padding: 40px 103px;
+  width: 27.8vw;
   margin-bottom: 40px;
 }
 
@@ -127,7 +137,7 @@
 .nav-carousel-btn {
   position: absolute;
   bottom: 0;
-  right: 442px;
+  left: 58.3vw;
   display: flex;
   flex-direction: row;
 }
@@ -135,8 +145,9 @@
 .carousel-btn {
   color: var(--dark-gray);
   background-color: var(--black);
-  padding: 25px 32px;
+  padding: 25px 32.5px;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .carousel-btn:hover {
@@ -149,11 +160,17 @@
   display: flex;
 }
 
+.about img {
+  object-fit: cover;
+  width: 31vw;
+}
+
 .infos-about {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 50px;
+  padding: 30px 50px;
+  width: 38vw;
 }
 
 .infos-about h3 {
@@ -170,4 +187,10 @@
   opacity: 0.7;
   letter-spacing: -1px;
   font-size: 13px;
+}
+
+/* FOOTER */
+
+.attribution {
+  padding: 10px;
 }
