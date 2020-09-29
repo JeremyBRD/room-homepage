@@ -77,13 +77,15 @@
           </div>
         </div>
       </div>
+
+      <!-- >>>>>>>NAVIGATION CAROUSEL BTN<<<<<<<< -->
       <div class="nav-carousel-btn">
-        <i class="fas fa-angle-left carousel-btn"></i>
-        <i class="fas fa-angle-right carousel-btn"></i>
+        <i class="fas fa-angle-left carousel-btn" id="previous"></i>
+        <i class="fas fa-angle-right carousel-btn" id="next"></i>
       </div>
     </div>
-    <!-- >>>>>>>ABOUT<<<<<<<< -->
 
+    <!-- >>>>>>>ABOUT<<<<<<<< -->
     <div class="about" id="lt-about">
       <img src="./assets/images/image-about-dark.jpg" alt="salon picture dark">
       <div class="infos-about">
@@ -99,11 +101,35 @@
       <img src="./assets/images/image-about-light.jpg" alt="salon picture light">
 
     </div>
-
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded with <i class="fa fa-heart" style="color: red"></i> by <a href="https://www.jeremybrd.com" target="_blank" style="color: blue; text-decoration: under;">Jérémy BRD</a>.
     </div>
   </div>
+  <script>
+    const carouselElements = document.querySelector('.carousel-element');
+    const carouselBtns = document.querySelectorAll('.carousel-btn');
+    const numberOfElements = document.querySelectorAll('.carousel-element').length;
+    let elementIndex = 1;
+    let translateX = 0;
+
+    carouselBtns.forEach(btn => {
+      btn.addEventListener('click', event => {
+        if (event.target.id === 'previous') {
+          if (elementIndex !== 1) {
+            elementIndex-- ;
+            translateX += 100;
+          }
+        } else {
+          if (elementIndex !== numberOfElements) {
+            elementIndex++ ;
+            translateX -= 100;
+          }
+        }
+
+        carouselElements.style.marginLeft = `${translateX}vw`;
+      });
+    });
+  </script>
 </body>
 </html>
