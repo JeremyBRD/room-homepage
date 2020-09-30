@@ -232,6 +232,12 @@
     display: none;
   }
 
+  .navbar-mobile {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+  }
+
   .menu-options {
     display: none;
   }
