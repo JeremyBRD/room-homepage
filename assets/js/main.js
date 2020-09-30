@@ -62,8 +62,6 @@ const moveToPreviousSlide = () => {
   slide.style.transition = '.7s';
 };
 
-navBtns
-
 slideContainer.addEventListener('mouseenter', () => {
   if (window.innerWidth <= 900 ) return;
   clearInterval(slideId);
