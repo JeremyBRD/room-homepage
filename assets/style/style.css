@@ -195,3 +195,35 @@
 .attribution {
   padding: 10px;
 }
+
+@media (max-width: 900px) {
+
+  .carousel-container {
+    position: relative;
+  }
+
+  .carousel-element {
+    flex-direction: column;
+  }
+
+  .carousel-element img {
+    width: 100vw;
+    position: relative;
+  }
+
+  .description {
+    padding: 65px 40px;
+    width: unset;
+  }
+
+  .nav-carousel-btn {
+    position: absolute;
+    right: 0;
+    bottom: unset;
+    left: unset;
+  }
+}
+
+/* @media (max-width: 375px) {
+
+} */
