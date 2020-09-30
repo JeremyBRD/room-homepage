@@ -201,6 +201,16 @@
 
 @media (max-width: 900px) {
 
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-mobile {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+  }
+
   .carousel-container {
     position: relative;
   }
@@ -224,6 +234,10 @@
     right: 0;
     bottom: unset;
     left: unset;
+  }
+  
+  #overlay {
+    display: none;
   }
 }
 
