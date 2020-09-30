@@ -5,6 +5,7 @@ const slideContainer = document.querySelector('.carousel-container');
 const slide = document.querySelector('.carousel');
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('previous');
+const navBtns = document.querySelector('.nav-carousel-btn')
 const interval = 3000;
 
 let slides = document.querySelectorAll('.carousel-element');
@@ -61,7 +62,10 @@ const moveToPreviousSlide = () => {
   slide.style.transition = '.7s';
 };
 
+
+
 slideContainer.addEventListener('mouseenter', () => {
+  if (window.innerWidth <= 900 ) return;
   clearInterval(slideId);
 });
 
@@ -82,6 +86,7 @@ let newY = getHeight();
 const styleNavTop = () => navCarousel.style.top = `${newY - 80}px`;
 
 const initY = () => {
+  if (newY > 900) return;
   styleNavTop();
 };
 
