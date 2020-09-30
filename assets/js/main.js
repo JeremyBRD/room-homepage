@@ -4,10 +4,8 @@ import { displayMenu, quitMenu } from './hamburger.js';
 
 // INIT FUNCTIONS
 
-document.addEventListener('turbolinks:load', () => {
-  startSlide();
-  initY();
-  reportWindowsSize();
-  displayMenu();
-  quitMenu();
-});
+startSlide();
+initY();
+reportWindowsSize();
+displayMenu();
+quitMenu();
