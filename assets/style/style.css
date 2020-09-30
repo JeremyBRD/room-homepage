@@ -222,6 +222,8 @@
   .carousel-element img {
     width: 100vw;
     position: relative;
+    height: 40vh;
+    object-fit: unset;
   }
 
   .description {
@@ -234,31 +236,6 @@
     right: 0;
     bottom: unset;
     left: unset;
-  }
-  
-  #overlay {
-    display: none;
-  }
-}
-
-@media (max-width: 400px) {
-  .navbar-desktop {
-    display: none;
-  }
-
-  .navbar-mobile {
-    position: absolute;
-    display: flex;
-    z-index: 1;
-  }
-
-  .menu-options {
-    display: none;
-  }
-
-  .carousel-element img {
-    height: 40vh;
-    object-fit: unset;
   }
 
   .about {
@@ -273,8 +250,12 @@
     padding: 50px 50px;
     width: inherit;
   }
-
+  
   #overlay {
     display: none;
+  }
+
+  .carousel-btn:hover {
+    background-color: var(--dark-gray);
   }
 }
