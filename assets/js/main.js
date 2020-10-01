@@ -4,8 +4,8 @@ import { displayMenu, quitMenu } from './hamburger.js';
 
 // INIT FUNCTIONS
 
-startSlide();
 initY();
 reportWindowsSize();
 displayMenu();
 quitMenu();
+startSlide();

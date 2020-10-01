@@ -4,7 +4,6 @@ const slideContainer = document.querySelector('.carousel-container');
 const slide = document.querySelector('.carousel');
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('previous');
-const navBtns = document.querySelector('.nav-carousel-btn')
 const interval = 3000;
 
 let slides = document.querySelectorAll('.carousel-element');
