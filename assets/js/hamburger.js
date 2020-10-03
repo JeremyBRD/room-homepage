@@ -3,22 +3,25 @@
 const navMobile = document.getElementById('nav-mobile');
 const overlay = document.getElementById('overlay');
 const hamburger = document.getElementById('hamburger');
-const cross = document.getElementById('close-overlay');
+const links = document.querySelectorAll('close-menu');
 
 const overlayOn = () => overlay.style.display = 'flex';
 const navOff = () => navMobile.style.display = 'none';
 const overlayOff = () => overlay.style.display = 'none';
 const navOn = () => navMobile.style.display = 'flex';
+const disableScroll = () => document.body.classList.add("stop-scrolling");
+const enableScroll = () => document.body.classList.remove("stop-scrolling");
 
+const clickOnLinks = () => links.addEventListener('click', () => {
+  overlayOff();
+  navOn();
+  enableScroll();
+})
 
 const displayMenu = () => hamburger.addEventListener('click', () => {
   overlayOn();
   navOff();
+  disableScroll();
 });
 
-const quitMenu = () => cross.addEventListener('click', () => {
-  overlayOff();
-  navOn();
-});
-
-export{ displayMenu, quitMenu };
+export{ displayMenu, clickOnLinks };

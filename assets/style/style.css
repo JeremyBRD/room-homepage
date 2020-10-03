@@ -17,6 +17,11 @@
 }
 
 /* NAVBAR */
+
+.stop-scrolling { 
+  overflow: hidden; 
+} 
+
 .navbar-mobile{
   display: none;
 }
@@ -195,6 +200,10 @@
 }
 
 @media (max-width: 900px) {
+
+  .stop-scrolling { 
+    overflow: hidden; 
+  } 
 
   .navbar-desktop {
     display: none;
