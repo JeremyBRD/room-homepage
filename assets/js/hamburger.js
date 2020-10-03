@@ -3,7 +3,9 @@
 const navMobile = document.getElementById('nav-mobile');
 const overlay = document.getElementById('overlay');
 const hamburger = document.getElementById('hamburger');
-const links = document.querySelectorAll('close-menu');
+const navLinks = document.querySelectorAll('.navlinks-mobile > a');
+
+console.log(navLinks);
 
 const overlayOn = () => overlay.style.display = 'flex';
 const navOff = () => navMobile.style.display = 'none';
