@@ -11,14 +11,16 @@ const overlayOn = () => overlay.style.display = 'flex';
 const navOff = () => navMobile.style.display = 'none';
 const overlayOff = () => overlay.style.display = 'none';
 const navOn = () => navMobile.style.display = 'flex';
-const disableScroll = () => document.body.classList.add("stop-scrolling");
-const enableScroll = () => document.body.classList.remove("stop-scrolling");
+const disableScroll = () => document.body.classList.add('stop-scrolling');
+const enableScroll = () => document.body.classList.remove('stop-scrolling');
 
-const clickOnLinks = () => links.addEventListener('click', () => {
-  overlayOff();
-  navOn();
-  enableScroll();
-})
+const clickOnLinks = () => navLinks.forEach (link => {
+  link.addEventListener('click', () => {
+    overlayOff();
+    navOn();
+    enableScroll();
+  })
+});
 
 const displayMenu = () => hamburger.addEventListener('click', () => {
   overlayOn();
